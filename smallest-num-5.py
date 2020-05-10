@@ -76,5 +76,15 @@ while True:
   else:
     num = num + 1
 print(num)
+
+#Shortcut way
+
+from math import gcd
+from functools import reduce
+
+nums = [i for i in range(1, 21)]
+
+print(reduce(lambda a,b: a*b//gcd(a, b), nums))
+
 """
 
